@@ -34,6 +34,12 @@ type ContactResponse struct {
 	Message string `json:"message"`
 }
 
+func NewPigeon(keyId,secret string) PigeonMail {
+	return PigeonMail{
+		KeyId: keyId,
+		Secret: secret,
+	}
+}
 
 
 func (p PigeonMail) InstallContact(contact Contact) error {
