@@ -44,12 +44,12 @@ func NewPigeon(keyId,secret string) PigeonMail {
 
 func (p PigeonMail) InstallContact(contact Contact) error {
 	p.contact = contact
-	return p.postRequest(host + "/contact/install")
+	return p.postRequest("/contact/install")
 }
 
 func (p PigeonMail) UninstallContact(contact Contact) error {
 	p.contact = contact
-	return p.postRequest(host + "/contact/uninsatll")
+	return p.postRequest("/contact/uninsatll")
 }
 
 func (p PigeonMail) postRequest(path string) error {
